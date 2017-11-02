@@ -1,0 +1,30 @@
+FROM ubuntu:16.04
+
+MAINTAINER Travis Collins (travis.collins@analog.com)
+
+RUN apt update
+
+RUN apt install -y gnuradio gnuradio-dev cmake flex bison git swig libxml2-dev libxml2 doxygen
+
+
+RUN git clone https://github.com/analogdevicesinc/libiio.git
+WORKDIR /libiio
+RUN mkdir build
+WORKDIR /libiio/build
+RUN cmake ..
+RUN make
+RUN make install
+
+WORKDIR /
+RUN git clone https://github.com/analogdevicesinc/libad9361-iio.git
+WORKDIR /libad9361-iio
+RUN cmake .
+RUN make
+RUN make install
+
+WORKDIR /
+RUN git clone https://github.com/analogdevicesinc/gr-iio.git
+WORKDIR /gr-iio
+RUN cmake .
+RUN make
+#RUN make test
