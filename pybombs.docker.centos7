@@ -12,7 +12,8 @@ RUN yum install -y gnuradio gnuradio-devel cmake flex bison git swig libxml2-dev
 RUN yum install -y python-pip
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
-RUN pip install pybombs
+#RUN pip install pybombs
+RUN pip install git+https://github.com/gnuradio/pybombs.git
 
 RUN pybombs auto-config
 #RUN pybombs recipes add gr-recipes https://github.com/tfcollins/gr-recipes.git
