@@ -8,7 +8,7 @@ RUN yum -y groupinstall "Development Tools"
 RUN yum install -y epel-release
 
 RUN yum install -y gnuradio gnuradio-devel cmake flex bison git swig libxml2-devel libxml2 doxygen boost-devel
-RUN yum install -y python2.7
+#RUN yum install -y python2.7
 RUN yum install -y python-pip
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
