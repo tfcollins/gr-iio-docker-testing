@@ -13,6 +13,6 @@ env:
   - OS="pybombs.docker.ubuntu16.04"
   - OS="pybombs.docker.centos7"
 
-before_install:
+script:
   - docker build . -t $OS  -f $OS
   - docker run -d $OS
