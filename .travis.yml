@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+  - docker
+
+before_install:
+  - docker build . -t test1  -f "gr-iio.docker.ubuntu"
+  - docker run -d test1
