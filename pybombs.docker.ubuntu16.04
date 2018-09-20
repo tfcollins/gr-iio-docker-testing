@@ -13,7 +13,7 @@ RUN pip install pybombs
 RUN pybombs auto-config
 RUN pybombs recipes add gr-recipes https://github.com/gnuradio/gr-recipes.git
 RUN pybombs recipes add gr-etcetera https://github.com/gnuradio/gr-etcetera.git
-RUN pybombs prefix init /target -a sdr -R gnuradio-stable
+RUN pybombs prefix init ~/prefix -a myprefix -R gnuradio-default
 RUN pybombs install gr-iio
 
 #RUN apt install -y cmake flex bison git swig libxml2-dev libxml2 doxygen
