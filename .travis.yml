@@ -11,9 +11,10 @@ env:
   - OS="gr-iio.docker.ubuntu16.04"
   - OS="gr-iio.docker.centos7"
   - OS="gr-iio.docker.debian9"
-  - OS="pybombs.docker.ubuntu17.04"
+  - OS="pybombs.docker.ubuntu18.04"
   - OS="pybombs.docker.ubuntu16.04"
   - OS="pybombs.docker.centos7"
+  - OS="pybombs.docker.debian9"
 
 script:
   - docker build . -t $OS  -f $OS
