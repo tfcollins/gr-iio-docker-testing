@@ -25,7 +25,8 @@ RUN pybombs -y recipes add gr-etcetera https://github.com/gnuradio/gr-etcetera.g
 
 #RUN pybombs prefix init /target
 #RUN pybombs install gnuradio
-RUN pybombs prefix init /target -a sdr -R gnuradio-stable
+#RUN pybombs prefix init /target -a sdr -R gnuradio-stable
+RUN pybombs prefix init ~/prefix -a myprefix -R gnuradio-default
 #RUN pybombs prefix init /target -a sdr -R gnuradio-default
 #RUN pybombs prefix init /target -a sdr -R gnuradio
 #RUN pybombs install gnuradio
