@@ -6,6 +6,7 @@ RUN apt update
 
 RUN apt install -y python2.7
 RUN apt install -y python-pip
+RUN apt install -y python-apt
 RUN pip install --upgrade pip
 RUN pip install --upgrade setuptools
 RUN pip install pybombs
@@ -13,6 +14,6 @@ RUN pip install pybombs
 RUN pybombs auto-config
 RUN pybombs recipes add gr-recipes https://github.com/gnuradio/gr-recipes.git
 RUN pybombs recipes add gr-etcetera https://github.com/gnuradio/gr-etcetera.git
-RUN pybombs prefix init ~/prefix -a myprefix -R gnuradio
+RUN pybombs prefix init ~/prefix -a myprefix -R gnuradio-default
 RUN pybombs install gr-iio
 
