@@ -8,7 +8,8 @@ trigger:
 
 pool:
   vmImage: 'Ubuntu-16.04'
-
-- script: |
-    docker build . -t gr-iio.docker.ubuntu16.04  -f gr-iio.docker.ubuntu16.04
-    docker run -d gr-iio.docker.ubuntu16.04
+  
+steps:
+  - script: |
+      docker build . -t gr-iio.docker.ubuntu16.04  -f gr-iio.docker.ubuntu16.04
+      docker run -d gr-iio.docker.ubuntu16.04
