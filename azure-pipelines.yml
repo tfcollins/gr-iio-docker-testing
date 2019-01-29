@@ -8,17 +8,7 @@ trigger:
 
 pool:
   vmImage: 'Ubuntu-16.04'
-  
-jobs:
-- job: 'Test'
-  pool:
-    vmImage: 'ubuntu-16.04'
-  strategy:
-    matrix:
-      APT:
-        dockerfile: 'gr-iio.docker.ubuntu16.04'
-    maxParallel: 3
 
 - script: |
-    docker build . -t $(dockerfile)  -f $(dockerfile)
-    docker run -d $(dockerfile)
+    docker build . -t gr-iio.docker.ubuntu16.04  -f gr-iio.docker.ubuntu16.04
+    docker run -d gr-iio.docker.ubuntu16.04
