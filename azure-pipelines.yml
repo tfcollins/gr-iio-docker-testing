@@ -11,5 +11,5 @@ pool:
   
 steps:
   - script: |
-      docker build . -t gr-iio.docker.ubuntu16.04  -f gr-iio.docker.ubuntu16.04
-      docker run -d gr-iio.docker.ubuntu16.04
+      docker build . -t pybombs.docker.ubuntu16.04  -f pybombs.docker.ubuntu16.04
+      docker run -d pybombs.docker.ubuntu16.04
