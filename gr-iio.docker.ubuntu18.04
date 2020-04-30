@@ -25,7 +25,7 @@ RUN make install
 WORKDIR /
 RUN git clone https://github.com/analogdevicesinc/gr-iio.git
 WORKDIR /gr-iio
-RUN git checkout context-closure-bug
+RUN git checkout master
 RUN cmake .
 RUN make
 #RUN make test
