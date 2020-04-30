@@ -7,6 +7,7 @@ services:
 
 env:
   matrix:
+  - OS="gr-iio.docker.ubuntu20.04"
   - OS="gr-iio.docker.ubuntu18.04"
   - OS="gr-iio.docker.ubuntu16.04"
   - OS="gr-iio.docker.centos7"
